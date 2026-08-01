@@ -1,6 +1,6 @@
 # Vignesh Universe – Complete Website Package
 
-**Live Website :** [https://vigneshuniverse.github.io/Final/Index.html](https://vigneshuniverse.github.io/Final/Index.html)
+**Live Website :** [https://vigneshuniverse.github.io/Final/index.html](https://vigneshuniverse.github.io/Final/index.html)
 
 Static Multi-Page Website For **GitHub Pages** With A **Google Apps Script** Backend ( Admin Panel, Contact Form, Shopping Products, Email Routing ).
 
@@ -94,7 +94,7 @@ The Package Is Optimized For **Github Pages**, Uses **No Bootstrap / No Font Awe
 
 | Page | File | Description |
 |------|------|-------------|
-| Home | `Index.html` | Hero, About, Counters, Visitors, Businesses, Why, Testimonials, FAQ, Contact Form |
+| Home | `index.html` | Hero, About, Counters, Visitors, Businesses, Why, Testimonials, FAQ, Contact Form |
 | Contact | `Contact.html` | Full Contact Page With Form + Business Emails |
 | Shopping | `Shopping.html` | Product Grid Loaded From Apps Script |
 | Digital Hub | `Digital-Hub.html` | Services + Why Choose + CTA |
