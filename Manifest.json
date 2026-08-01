@@ -2,7 +2,7 @@
   "name": "Vignesh Universe",
   "short_name": "Vignesh Universe",
   "description": "Official Website Of Vignesh A \u2013 Digital Services, Electronics, Pixel Works, Digital Marketing & Technologies",
-  "start_url": "./Index.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
