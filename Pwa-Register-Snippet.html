@@ -1,0 +1,28 @@
+<!-- ========== PWA: Add These Lines Inside <head> Of Every HTML Page ========== -->
+<!-- Theme Color For Mobile Browser Chrome -->
+<meta name="theme-color" content="#2563EB">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vignesh Universe">
+
+<!-- Link To Web App Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Apple Touch Icon (Optional But Recommended) -->
+<link rel="apple-touch-icon" href="Assets/Images/Icons/Icon.webp">
+
+// ========== PWA: Add This Script Before </body> On Every HTML Page ==========
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('./Sw.js')
+        .then(function (reg) {
+          console.log('Service Worker Registered:', reg.scope);
+        })
+        .catch(function (err) {
+          console.log('Service Worker Registration Failed:', err);
+        });
+    });
+  }
+</script>

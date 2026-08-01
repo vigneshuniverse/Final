@@ -1,0 +1,21 @@
+# Vignesh Universe – Robots.txt
+# Live Site: https://vigneshuniverse.github.io/Final/
+User-agent: *
+Allow: /
+
+# Public Pages
+Allow: /Index.html
+Allow: /Contact.html
+Allow: /Shopping.html
+Allow: /Digital-Hub.html
+Allow: /Electronics-Service.html
+Allow: /Pixel-Works.html
+Allow: /Digital-Marketing.html
+Allow: /Technologies.html
+Allow: /Privacy-Policy.html
+
+# Assets
+Allow: /Assets/
+
+# Sitemap
+Sitemap: https://vigneshuniverse.github.io/Final/Sitemap.xml
