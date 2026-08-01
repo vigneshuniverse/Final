@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Public Pages
-Allow: /Index.html
+Allow: /index.html
 Allow: /Contact.html
 Allow: /Shopping.html
 Allow: /Digital-Hub.html
