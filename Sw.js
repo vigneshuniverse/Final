@@ -3,7 +3,7 @@
 const CACHE_NAME = 'vignesh-universe-v1';
 const ASSETS = [
   './',
-  './Index.html',
+  './index.html',
   './Contact.html',
   './Shopping.html',
   './Digital-Hub.html',
@@ -13,7 +13,7 @@ const ASSETS = [
   './Technologies.html',
   './Privacy-Policy.html',
   './Assets/Css/Common.css',
-  './Assets/Css/Index.css',
+  './Assets/Css/index.css',
   './Assets/Css/Contact.css',
   './Assets/Css/Shopping.css',
   './Assets/Css/Digital-Hub.css',
@@ -70,7 +70,7 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => {
         return caches.match(event.request).then((cached) => {
-          return cached || caches.match('./Index.html');
+          return cached || caches.match('./index.html');
         });
       })
   );
