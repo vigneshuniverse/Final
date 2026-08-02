@@ -16,6 +16,9 @@ Allow: /Privacy-Policy.html
 
 # Assets
 Allow: /Assets/
+Allow: /Assets/Images/
+Allow: /Assets/Images/Profile/
+Allow: /Assets/Images/Profile/Profile.webp
 
 # Sitemap
 Sitemap: https://vigneshuniverse.github.io/Final/Sitemap.xml
