@@ -1,0 +1,389 @@
+/* Vignesh Universe – Common Styles (Shared Across All Pages) */
+/* Vignesh Universe – Optimized CSS */
+:root {
+  --primary: #2563EB;
+  --primary-dark: #1D4ED8;
+  --gold: #E6B800;
+  --dark: #0F172A;
+  --text: #1E293B;
+  --muted: #475569;
+  --bg: #F8FAFC;
+  --white: #fff;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .06);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, .1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color .2s, transform .2s, background .2s;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 36px;
+  font-size: 1.05rem;
+}
+
+/* Skip link – permanently hidden */
+.skip-link {
+  display: none !important;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, .95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 0;
+  transition: box-shadow .25s;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .18);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .5px;
+}
+
+.nav-toggle {
+  display: none;
+  background: 0;
+  border: 0;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: .95rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: transform .2s, background .2s;
+  text-align: center;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn-gold:hover {
+  background: #FFC107;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #25D366;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: .9rem;
+}
+
+.btn-email {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn-email:hover {
+  background: #FFC107;
+  transform: translateY(-2px);
+}
+
+
+/* Footer + Floating */
+footer {
+  background: var(--dark);
+  color: #CBD5E1;
+  padding: 36px 0 20px;
+  text-align: center;
+}
+
+.footer-tagline {
+  font-size: .9rem;
+  margin: 0;
+}
+
+.footer-links {
+  margin-top: 12px;
+  font-size: .8rem;
+}
+
+.footer-links a {
+  color: #CBD5E1;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.float-btn {
+  position: fixed;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+  z-index: 999;
+  transition: transform .2s;
+}
+
+.float-btn:hover {
+  transform: scale(1.08);
+  color: #fff;
+}
+
+.float-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.whatsapp {
+  right: 16px;
+  bottom: 16px;
+  background: #25D366;
+}
+
+.call {
+  left: 16px;
+  bottom: 16px;
+  background: var(--primary);
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: 80px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+  z-index: 999;
+  font-size: 18px;
+}
+
+#topBtn:hover {
+  transform: translateY(-3px);
+}
+
+#topBtn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+
+/* Responsive – Common */
+@media (max-width: 991px) {
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, .98);
+    flex-direction: column;
+    padding: 12px 16px 20px;
+    gap: 4px;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 48px 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .float-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  #topBtn {
+    width: 42px;
+    height: 42px;
+    bottom: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+
+/* Screen-reader only labels */
+label.sr-only, .sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
