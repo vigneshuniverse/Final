@@ -3,22 +3,24 @@
 User-agent: *
 Allow: /
 
-# Public Pages
 Allow: /index.html
 Allow: /Contact.html
 Allow: /Shopping.html
 Allow: /Digital-Hub.html
+Allow: /Recharge-Ticket-Booking.html
+Allow: /Mobile-Recharge.html
+Allow: /DTH-Recharge.html
+Allow: /FasTag-Recharge.html
+Allow: /Utility-Bill-Payments.html
+Allow: /Bus-Ticket-Booking.html
+Allow: /Train-Ticket-Booking.html
+Allow: /Flight-Ticket-Booking.html
+Allow: /Movie-Ticket-Booking.html
 Allow: /Electronics-Service.html
 Allow: /Pixel-Works.html
 Allow: /Digital-Marketing.html
 Allow: /Technologies.html
 Allow: /Privacy-Policy.html
-
-# Assets
 Allow: /Assets/
-Allow: /Assets/Images/
-Allow: /Assets/Images/Profile/
-Allow: /Assets/Images/Profile/Profile.webp
 
-# Sitemap
 Sitemap: https://vigneshuniverse.github.io/Final/Sitemap.xml
