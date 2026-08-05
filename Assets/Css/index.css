@@ -55,28 +55,32 @@
   margin: 0 auto;
 }
 
-
-/* ========== About Section (Centered) ========== */
+/* ========== About Section - Forced Center ========== */
 #about {
-  background: var(--white);
-  text-align: center;
+  background: var(--white) !important;
+  text-align: center !important;
+}
+
+#about .container {
+  text-align: center !important;
 }
 
 #about .section-title {
-  text-align: center;
+  text-align: center !important;
   margin-bottom: 20px;
 }
 
 #about p {
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: center;
-  color: #475569;
-  font-size: 1.08rem;
-  line-height: 1.85;
-  padding: 0 16px;
+  max-width: 780px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  color: #475569 !important;
+  font-size: 1.08rem !important;
+  line-height: 1.85 !important;
+  padding: 0 16px !important;
+  display: block !important;
 }
-
 
 /* ========== Counters with Icons ========== */
 .counters-section {
