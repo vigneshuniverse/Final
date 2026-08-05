@@ -1,4 +1,5 @@
 /* Vignesh Universe – Index Page Styles */
+
 /* Hero */
 .hero {
   min-height: 100vh;
@@ -53,6 +54,29 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
   margin: 0 auto;
 }
+
+
+/* ========== About Section (Centered) ========== */
+#about {
+  background: var(--white);
+  text-align: center;
+}
+
+#about .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  color: #475569;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  padding: 0 16px;
+}
+
 
 /* ========== Counters with Icons ========== */
 .counters-section {
@@ -113,27 +137,6 @@
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
-  .counters {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .counters {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .counter-item {
-    padding: 22px 12px;
-  }
-
-  .counter {
-    font-size: 1.6rem;
-  }
-}
 
 /* Business Cards */
 .biz-grid {
@@ -178,6 +181,7 @@
   margin-bottom: 18px;
   line-height: 1.65;
 }
+
 
 /* Why + Testimonials */
 .why-grid {
@@ -239,6 +243,7 @@
   margin: 10px 0;
   line-height: 1.65;
 }
+
 
 /* FAQ */
 .faq-list {
@@ -489,43 +494,8 @@ label.sr-only {
   margin: 0;
 }
 
-/* Tablet – 2x2 */
-@media (max-width: 991px) {
-  .visitors-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    max-width: 520px;
-  }
-}
 
-/* Mobile – 2x2 */
-@media (max-width: 576px) {
-  .visitors-section {
-    padding: 40px 0 48px;
-  }
-
-  .visitors-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    max-width: 100%;
-    padding: 0 4px;
-  }
-
-  .visitor-card {
-    padding: 22px 12px;
-    border-radius: 16px;
-  }
-
-  .visitor-card .counter {
-    font-size: 1.6rem;
-  }
-
-  .visitor-card p {
-    font-size: 0.85rem;
-  }
-}
-
-/* Index Page Responsive */
+/* ========== Responsive ========== */
 @media (max-width: 991px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -557,6 +527,12 @@ label.sr-only {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .visitors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 520px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -570,6 +546,19 @@ label.sr-only {
     height: 200px;
   }
 
+  .counters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .counter-item {
+    padding: 22px 12px;
+  }
+
+  .counter {
+    font-size: 1.6rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -577,5 +566,29 @@ label.sr-only {
   .contact-actions .btn {
     width: auto;
     min-width: 120px;
+  }
+
+  .visitors-section {
+    padding: 40px 0 48px;
+  }
+
+  .visitors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .visitor-card {
+    padding: 22px 12px;
+    border-radius: 16px;
+  }
+
+  .visitor-card .counter {
+    font-size: 1.6rem;
+  }
+
+  .visitor-card p {
+    font-size: 0.85rem;
   }
 }
