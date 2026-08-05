@@ -54,21 +54,7 @@
   margin: 0 auto;
 }
 
-
-/* About + Counters */
-#about {
-  background: var(--white);
-}
-
-#about p {
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-  color: #475569;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
+/* ========== Counters with Icons ========== */
 .counters-section {
   padding: 48px 0;
   background: var(--white);
@@ -77,8 +63,39 @@
 .counters {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 20px;
   text-align: center;
+}
+
+.counter-item {
+  background: var(--bg);
+  border: 1px solid #F1F5F9;
+  border-radius: var(--radius);
+  padding: 28px 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.counter-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.counter-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+}
+
+.counter-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .counter {
@@ -86,13 +103,36 @@
   font-weight: 700;
   color: var(--primary);
   line-height: 1.2;
+  margin-bottom: 6px;
 }
 
-.counter + p {
-  font-size: .95rem;
+.counter-item p {
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--muted);
-  margin-top: 4px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .counters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .counters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .counter-item {
+    padding: 22px 12px;
+  }
+
+  .counter {
+    font-size: 1.6rem;
+  }
 }
 
 /* Business Cards */
