@@ -65,7 +65,10 @@
       html+='<div class="product-body">';
       if(catName)html+='<div class="product-cat">'+escapeHtml(catName)+'</div>';
       html+='<h3 class="product-name">'+escapeHtml(p.name)+'</h3>';
-      if(p.description)html+='<p class="product-desc">'+escapeHtml(p.description)+'</p>';
+      if(p.description){
+  var desc = escapeHtml(p.description).replace(/\n/g, '<br>');
+  html+='<p class="product-desc">'+desc+'</p>';
+      }
       if(price)html+='<div class="product-price">'+price+'</div>';
       html+='<div class="product-actions"><a class="btn btn-success btn-sm" href="https://wa.me/917448357381?text='+waText+'" target="_blank" rel="noopener">WhatsApp Order</a></div>';
       html+='</div></article>';
