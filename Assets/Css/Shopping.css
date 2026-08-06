@@ -1,5 +1,4 @@
 /* Vignesh Universe – Shopping Page Styles */
-/* Shopping */
 
 .shop-hero {
   background: linear-gradient(135deg, #0F172A, #2563EB);
@@ -107,9 +106,10 @@
 .product-desc {
   font-size: .9rem;
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.6;
   margin-bottom: 12px;
   flex: 1;
+  white-space: pre-line;
 }
 
 .product-price {
@@ -142,7 +142,6 @@
   padding: 40px;
   color: var(--muted);
 }
-
 
 /* Shopping Responsive */
 @media (max-width: 576px) {
