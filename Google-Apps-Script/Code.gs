@@ -471,10 +471,15 @@ function uploadImage(data) {
   var folder = getOrCreateFolder();
   var file = folder.createFile(blob);
   file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  
+  var fileId = file.getId();
+  
   return {
     success: true,
-    imageUrl: 'https://drive.google.com/uc?export=view&id=' + file.getId(),
-    fileId: file.getId()
+    imageUrl: 'https://lh3.googleusercontent.com/d/' + fileId,
+    imageUrlAlt: 'https://drive.google.com/thumbnail?id=' + fileId + '&sz=w1000',
+    imageUrlOld: 'https://drive.google.com/uc?export=view&id=' + fileId,
+    fileId: fileId
   };
 }
 
