@@ -1,0 +1,27 @@
+function uploadImage(data) {
+  if (!data.base64) return { success: false, error: 'No Image Data' };
+  var base64 = data.base64;
+  var contentType = 'image/jpeg';
+  var filename = data.filename || ('product_' + Date.now() + '.jpg');
+  if (base64.indexOf('data:') === 0) {
+    var parts = base64.split(',');
+    var meta = parts[0];
+    base64 = parts[1];
+    var match = meta.match(/data:([^;]+)/);
+    if (match) contentType = match[1];
+  }
+  var blob = Utilities.newBlob(Utilities.base64Decode(base64), contentType, filename);
+  var folder = getOrCreateFolder();
+  var file = folder.createFile(blob);
+  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  
+  var fileId = file.getId();
+  
+  return {
+    success: true,
+    imageUrl: 'https://lh3.googleusercontent.com/d/' + fileId,
+    imageUrlAlt: 'https://drive.google.com/thumbnail?id=' + fileId + '&sz=w1000',
+    imageUrlOld: 'https://drive.google.com/uc?export=view&id=' + fileId,
+    fileId: fileId
+  };
+}
